@@ -22,6 +22,4 @@
 
 [OkHttp](https://square.github.io/okhttp/)
 
-[菜鸟教程]()
-
 [Flyway](https://flywaydb.org/)
