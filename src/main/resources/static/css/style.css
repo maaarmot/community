@@ -2,3 +2,7 @@ body{background-color:#efefef}
 .m-container{margin: 30px;}
 .row{background-color:white}
 .btn-success{float:right;margin-bottom: 15px;}
+.alert-tip{padding: 6px;}
+.btn-success-box{padding-right:0}
+.media-object{width:42px;height: 42px}
+.text-desc{font-size: 12px;font-weight: normal;color: #999}

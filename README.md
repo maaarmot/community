@@ -15,6 +15,8 @@
 
 [maven仓库](https://mvnrepository.com/)
 
+[thymeleaf](https://www.thymeleaf.org/doc/tutorials/3.0/usingthymeleaf.html#using-theach)
+
 ## 工具
 [Git](https://git-scm.com/download)
 
@@ -23,3 +25,5 @@
 [OkHttp](https://square.github.io/okhttp/)
 
 [Flyway](https://flywaydb.org/)
+
+[Lombok](https://projectlombok.org/setup/maven)
