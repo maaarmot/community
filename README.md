@@ -19,6 +19,8 @@
 
 [拦截器](https://docs.spring.io/spring/docs/5.0.3.RELEASE/spring-framework-reference/web.html#mvc-config-interceptors)
 
+[mybtis generator](http://mybatis.org/generator/)
+
 ## 工具
 [Git](https://git-scm.com/download)
 
@@ -29,3 +31,8 @@
 [Flyway](https://flywaydb.org/)
 
 [Lombok](https://projectlombok.org/setup/maven)
+
+## bash
+mvn flyway:migrate
+
+mvn -Dmybatis.generator.overwrite=true mybatis-generator:generate
