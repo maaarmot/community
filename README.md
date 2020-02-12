@@ -17,6 +17,8 @@
 
 [thymeleaf](https://www.thymeleaf.org/doc/tutorials/3.0/usingthymeleaf.html#using-theach)
 
+[拦截器](https://docs.spring.io/spring/docs/5.0.3.RELEASE/spring-framework-reference/web.html#mvc-config-interceptors)
+
 ## 工具
 [Git](https://git-scm.com/download)
 
