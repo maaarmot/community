@@ -32,6 +32,8 @@
 
 [Lombok](https://projectlombok.org/setup/maven)
 
+[postman 网页版](chrome-extension://coohjcphdfgbiolnekdpbcijmhambjff/index.html)
+
 ## bash
 mvn flyway:migrate
 
