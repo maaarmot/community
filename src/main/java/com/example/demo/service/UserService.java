@@ -15,7 +15,6 @@ public class UserService {
     private UserMapper userMapper;
 
     public void createOrUpdate(User user) {
-        //User dbUser=userMapper.findByAccountId(user.getAccountId());
         UserExample example = new UserExample();
         example.createCriteria()
                 .andAccountIdEqualTo(user.getAccountId());
