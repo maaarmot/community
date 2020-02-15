@@ -16,6 +16,7 @@
 <div class="container-fluid m-container">
     <div class="row">
         <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
+            <!--正文-->
             <h4><span th:text="${question.title}"></span></h4>
             <span class="text-desc">
                 作者：<span th:text="${question.user.name}" class="questionAuthor"></span> |
@@ -31,6 +32,33 @@
                 编辑
             </a>
 
+            <!--回复列表-->
+            <h4>
+                <span th:text="${question.commentCount}"></span>个回复
+            </h4>
+            <hr class="col-lg-12 col-md-12 col-sm-12 col-xs-12 s-m-t-0">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 s-p-r-0" th:each="comment:${comments}">
+                <div class="media s-m-b-15 s-b-b">
+                    <div class="media-left">
+                        <a href="#">
+                            <img class="media-object img-rounded" th:src="${comment.user.avatarUrl}">
+                        </a>
+                    </div>
+                    <div class="media-body comment-ava s-p-5">
+                        <h6 class="media-heading">
+                            <span th:text="${comment.user.name}"></span>
+                        </h6>
+                        <div th:text="${comment.content}"></div>
+                        <div class="s-menu s-m-t-10 s-p-b-5">
+                            <span class="glyphicon glyphicon-thumbs-up s-m-r-5 s-menu-icon"></span>
+                            <span class="glyphicon glyphicon-comment s-menu-icon"></span>
+                            <span class="pull-right" th:text="${#dates.format(comment.gmtCreate,'yyyy-MM-dd')}"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--回复输入框-->
             <hr class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <div id="comment_section">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 s-m-b-10">

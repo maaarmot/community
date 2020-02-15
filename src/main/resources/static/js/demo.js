@@ -12,10 +12,19 @@ function post(){
         }),
         success:function (response) {
             if(response.code==200){
-                console.log("ii");
+                //请求成功
                 $("#comment_section").hide();
             }else {
-                alert(response.message);
+                if(response.code==2003){
+                    //说明未登录
+                    var isAccepted = confirm(response.message);
+                    if(isAccepted){
+                        window.open("https://github.com/login/oauth/authorize?client_id=6d02359770fa1e33a768&redirect_uri=http://localhost:8080/callback&scope=user&state=1");
+                        window.localStorage.setItem("closable",true);
+                    }
+                }else{
+                    alert(response.message);
+                }
             }
             console.log(response);
         },
