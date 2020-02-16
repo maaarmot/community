@@ -1,5 +1,5 @@
 window.onload=function () {
-    debugger;
+    // debugger;
     var closable=window.localStorage.getItem("closable");
     if(closable){
         window.close();

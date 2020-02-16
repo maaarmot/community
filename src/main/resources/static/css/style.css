@@ -10,14 +10,21 @@ body{background-color:#efefef}
 .gly-menu{color: #999;font-size: 13px}
 .comment-ava{padding-top: 13px;}
 .s-m-t-10{margin-top: 10px;}
+.s-m-t-15{margin-top: 15px;}
 .s-m-b-10{margin-bottom: 10px;}
 .s-m-b-15{margin-bottom: 15px;}
 .s-m-r-5{margin-right: 5px}
 .s-m-t-0{margin-top:0}
+.s-m-15{margin:15px 0}
 .s-p-5{padding:5px}
 .s-p-r-0{padding-right: 0}
 .s-p-b-5{padding-bottom: 5px}
+.s-p-t-20{padding-top: 20px;}
+.s-p-t-15{padding-top: 15px;}
 .s-menu{color: #999;font-size: 15px;}
 .s-menu-icon{cursor: pointer}/*鼠标停留时光标变小手*/
 .s-menu-icon:hover{color: #499ef3}
+.s-menu .active{color: #499ef3}
 .s-b-b{border-bottom: 1px solid #eee;}
+.s-b{border: 1px solid #eee;}
+.s-b-r-5{border-radius: 5px;}
