@@ -11,13 +11,16 @@ body{background-color:#efefef}
 .comment-ava{padding-top: 13px;}
 .s-m-t-10{margin-top: 10px;}
 .s-m-t-15{margin-top: 15px;}
+.s-m-t-30{margin-top: 30px;}
 .s-m-b-10{margin-bottom: 10px;}
 .s-m-b-15{margin-bottom: 15px;}
 .s-m-r-5{margin-right: 5px}
 .s-m-t-0{margin-top:0}
 .s-m-15{margin:15px 0}
+.s-p-tb-0{padding-top:0px;padding-bottom: 0px}
 .s-p-5{padding:5px}
 .s-p-r-0{padding-right: 0}
+.s-p-0{padding: 0}
 .s-p-b-5{padding-bottom: 5px}
 .s-p-t-20{padding-top: 20px;}
 .s-p-t-15{padding-top: 15px;}
@@ -28,3 +31,8 @@ body{background-color:#efefef}
 .s-b-b{border-bottom: 1px solid #eee;}
 .s-b{border: 1px solid #eee;}
 .s-b-r-5{border-radius: 5px;}
+.s-f-12{font-size: 12px}
+.related-ul{list-style: none}
+.related-ul a{text-decoration: none;color:#428bca;line-height: 30px}
+.related-ul a:hover{color:#666;}
+.ad{width: 100%}

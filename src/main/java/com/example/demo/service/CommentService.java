@@ -53,13 +53,13 @@ public class CommentService {
             }
             commentMapper.insert(comment);
 
-            Comment parentComment=new Comment();
-            parentComment.setId(comment.getParentId());
-            parentComment.setCommentCount(1);
-            commentExtMapper.incCommentCount(parentComment);
+//            Comment parentComment=new Comment();
+//            parentComment.setId(comment.getParentId());
+//            parentComment.setCommentCount(1);
+//            commentExtMapper.incCommentCount(parentComment);
 
-//            dbComment.setCommentCount(1);
-//            commentExtMapper.incCommentCount(dbComment);
+            dbComment.setCommentCount(1);
+            commentExtMapper.incCommentCount(dbComment);
         }else{
             //说明是回复问题
             Question question = questionMapper.selectByPrimaryKey(comment.getParentId());
