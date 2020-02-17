@@ -119,3 +119,19 @@ function collapseComments(e) {
         }
     }
 }
+
+function selectTag(e) {
+    var value = e.getAttribute("data-tag");
+    var pre = $("#tag").val();
+    if(pre){
+        if(pre.indexOf(value)==-1){
+            $("#tag").val(pre+','+value);
+        }
+    }else{
+        $("#tag").val(value);
+    }
+}
+
+function showSelectTag() {
+    $("#dis-none").show();
+}
