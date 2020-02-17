@@ -37,15 +37,16 @@
                     <!--标签选择-->
                     <div class="dis-none s-m-t-10" id="dis-none">
                         <ul class="nav nav-tabs s-f-12" role="tablist">
-                            <li role="presentation" th:each="tag:${tags}">
+                            <li role="presentation" th:each="tag,tagStat:${tags}" th:class="${tagStat.first? 'active':''}">
                                 <a th:href="${'#'+tag.categoryName}" aria-controls="home" role="tab" data-toggle="tab" th:text="${tag.categoryName}"></a>
                             </li>
                         </ul>
 
                         <div class="tab-content s-m-t-10">
-                            <div role="tabpanel" class="tab-pane" th:id="${tag.categoryName}" th:each="tag:${tags}">
+                            <div role="tabpanel" th:id="${tag.categoryName}"
+                                 th:each="tag:${tags}" th:class="${tagStat.first? 'active tab-pane':'tab-pane'}">
                                 <span th:each="selectTag:${tag.tags}">
-                                    <span class="label label-info s-f-15 s-p-tb-0" th:data-tag="${selectTag}"
+                                    <span class="label label-info s-menu-icon  s-f-15 s-p-tb-0" th:data-tag="${selectTag}"
                                           onclick="selectTag(this)" th:text="${selectTag}"></span>
                                 </span>
                             </div>
