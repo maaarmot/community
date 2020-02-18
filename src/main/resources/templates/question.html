@@ -7,10 +7,14 @@
     <link rel="stylesheet" href="/css/bootstrap-theme.min.css"/>
     <link rel="stylesheet" href="/css/style.css"/>
     <link rel="stylesheet" href="/css/profile.css"/>
+    <link rel="stylesheet" href="/css/editormd.preview.min.css" />
     <script src="/js/jquery.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
     <script src="/js/moment.js"></script>
     <script src="/js/demo.js"></script>
+    <script src="/js/editormd.min.js"></script>
+    <script src="/js/lib/marked.min.js"></script>
+    <script src="/js/lib/prettify.min.js"></script>
 </head>
 <body>
 <div th:insert="~{navigation :: copy}"></div>
@@ -25,14 +29,22 @@
                 阅读数：<span th:text="${question.viewCount}"></span>
             </span>
             <hr class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" th:text="${question.description}"></div>
-            <hr class="col-lg-12 col-md-12 col-sm-12 col-xs-12 s-m-b-10">
 
+            <!--问题描述-->
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="question-view">
+                <textarea style="display:none;" th:text="${question.description}"></textarea>
+            </div>
+            <script type="text/javascript">
+                $(function() {
+                    editormd.markdownToHTML("question-view", {});
+                });
+            </script>
+
+            <hr class="col-lg-12 col-md-12 col-sm-12 col-xs-12 s-m-b-10">
             <a th:href="@{'/publish/'+${question.id}}" class="gly-menu" th:if="${session.user!=null && session.user.id==question.creator}">
                 <span class="glyphicon glyphicon-pencil gly-menu" aria-hidden="true"></span>
                 编辑
             </a>
-
 
             <!--标签-->
             <div>
@@ -126,7 +138,7 @@
             <!--广告位-->
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <h4>关注麻酱社区</h4>
-                <img src="/img/ad.jpg" class="img-thumbnail ad">
+                <img src="/images/ad.jpg" class="img-thumbnail ad">
                 <hr class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             </div>
 
