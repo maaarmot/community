@@ -10,5 +10,7 @@ public class NotificationDTO {
     private Long notifier;
     private String notifierName;
     private String outerTitle;
-    private String type;
+    private Long outerid;
+    private String typeName;//“回复了问题”和“回复了回复”
+    private Integer type;
 }

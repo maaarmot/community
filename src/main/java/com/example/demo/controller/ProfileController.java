@@ -40,9 +40,11 @@ public class ProfileController {
             model.addAttribute("pagedto",pagedto);
         }else if("replies".equals(action)){
             PageDTO pagedto=notificationService.list(user.getId(),page,size);
+            Long unreadCount=notificationService.unreadCount(user.getId());
             model.addAttribute("pagedto",pagedto);
             model.addAttribute("section","replies");
             model.addAttribute("sectionName","最新回复");
+            model.addAttribute("unreadCount",unreadCount);
         }
 
         return "profile";
