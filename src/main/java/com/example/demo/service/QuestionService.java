@@ -2,6 +2,7 @@ package com.example.demo.service;
 
 import com.example.demo.dto.PageDTO;
 import com.example.demo.dto.QuestionDTO;
+import com.example.demo.dto.QuestionQueryDTO;
 import com.example.demo.exception.CustomizeErrorCode;
 import com.example.demo.exception.CustomizeException;
 import com.example.demo.mapper.QuestionExtMapper;
@@ -34,10 +35,19 @@ public class QuestionService {
     private QuestionExtMapper questionExtMapper;
 
     //返回首页的所有问题列表
-    public PageDTO list(Integer page, Integer size) {
+    public PageDTO list(String search,Integer page, Integer size) {
+
+        if(StringUtils.isNotBlank(search)){
+            String[] tags = StringUtils.split(search, " ");
+            search = Arrays.stream(tags).collect(Collectors.joining("|"));
+        }
+
+
         PageDTO pageDTO=new PageDTO();
         Integer totalPage;
-        Integer totalCount=(int)questionMapper.countByExample(new QuestionExample());
+        QuestionQueryDTO questionQueryDTO = new QuestionQueryDTO();
+        questionQueryDTO.setSearch(search);
+        Integer totalCount=questionExtMapper.countBySearch(questionQueryDTO);
 
         if(totalCount%size==0){
             totalPage=totalCount/size;
@@ -56,7 +66,9 @@ public class QuestionService {
         Integer offset=size*(page-1);
         QuestionExample questionExample = new QuestionExample();
         questionExample.setOrderByClause("gmt_create desc");
-        List<Question> questions=questionMapper.selectByExampleWithRowbounds(questionExample,new RowBounds(offset,size));
+        questionQueryDTO.setPage(offset);
+        questionQueryDTO.setSize(size);
+        List<Question> questions=questionExtMapper.selectBySearch(questionQueryDTO);
         List<QuestionDTO> questionDTOList=new ArrayList<>();
 
         for(Question question:questions){
