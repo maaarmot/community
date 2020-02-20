@@ -32,7 +32,7 @@
 
 [Lombok](https://projectlombok.org/setup/maven)
 
-[postman 网页版](chrome-extension://coohjcphdfgbiolnekdpbcijmhambjff/index.html)
+[postman网页版]chrome-extension://coohjcphdfgbiolnekdpbcijmhambjff/index.html
 
 [markdown 插件](https://pandao.github.io/editor.md/)
 
