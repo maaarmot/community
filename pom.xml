@@ -60,6 +60,12 @@
         </dependency>
 
         <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.19</version>
+        </dependency>
+
+        <dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
             <version>1.4.200</version>
@@ -103,11 +109,16 @@
                 <artifactId>flyway-maven-plugin</artifactId>
                 <version>6.2.1</version>
                 <configuration>
-                    <url>jdbc:h2:~/demo</url>
-                    <user>sa</user>
-                    <password>123456</password>
+                    <url>jdbc:mysql://10.9.17.214:3306/demo</url>
+                    <user>root</user>
+                    <password>7529ab--</password>
                 </configuration>
                 <dependencies>
+                    <dependency>
+                        <groupId>mysql</groupId>
+                        <artifactId>mysql-connector-java</artifactId>
+                        <version>8.0.19</version>
+                    </dependency>
                     <dependency>
                         <groupId>com.h2database</groupId>
                         <artifactId>h2</artifactId>
