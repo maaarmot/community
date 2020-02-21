@@ -1,10 +1,10 @@
-CREATE TABLE notification
+create table notification
 (
-    id bigint AUTO_INCREMENT PRIMARY KEY,
-    notifier bigint NOT NULL,
-    receiver bigint NOT NULL,
-    outerId bigint NOT NULL,
-    type int NOT NULL,
-    gmt_create bigint NOT NULL,
-    status int DEFAULT 0 NOT NULL
+    id bigint auto_increment primary key,
+    notifier bigint not null,
+    receiver bigint not null,
+    outerid bigint not null,
+    type int not null,
+    gmt_create bigint not null,
+    status int default 0 not null
 );

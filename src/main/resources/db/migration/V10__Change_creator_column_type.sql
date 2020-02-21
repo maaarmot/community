@@ -1,2 +1,2 @@
-ALTER TABLE QUESTION ALTER COLUMN creator bigint NOT NULL;
-ALTER TABLE COMMENT ALTER COLUMN commentator bigint NOT NULL;
+alter table question alter column creator bigint not null;
+alter table comment alter column commentator bigint not null;
